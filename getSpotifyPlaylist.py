@@ -4,8 +4,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 scope = "user-library-read"
-client_id = "f4d2453ddee7421687dc03a085854be8"
-client_secret = "954be9186f6f49478082542d4f0bea0a"
+client_id = "clientid"
+client_secret = "clientSecret"
 redirect_uri = "http://localhost:8080"
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope, client_id=client_id, client_secret=client_secret, redirect_uri=redirect_uri))
@@ -34,5 +34,5 @@ def get_name_and_artist(tracks):
 
 if __name__ == "__main__":
     songs = get_playlist_tracks("61AB5QRJWEg9Ld9wVqTgQl")
-    for i in get_name_and_artist(songs):
-        print(i)
+    get_name_and_artist(songs):
+        
